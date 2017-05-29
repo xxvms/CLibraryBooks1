@@ -2,6 +2,7 @@
 // Created by tom on 28/05/2017.
 //
 #include "Book.h"
+#include "Library.h"
 #include <iostream>
 
 Book::Book():author("n/a"), title("n/a"), publicationYear(0), ID(0){}
