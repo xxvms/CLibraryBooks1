@@ -3,31 +3,30 @@
 //
 //#include <string>
 //#include <iostream>
+#include <iostream>
 #include "Book.h"
 #include "Library.h"
-
-Library::Library(){}
-
-void Library::addBook2Lib()
+//TODO create member that will keep maximum of the books in the library (new) I think
+Library::Library()
 {
-    for (int i = 0; i < 5; i++)
-    {
-        books[i].addBook();
-    }
+   
+    Book* pointerBook = new  Book[maxAmountOfBooks];
 }
 
-void Library::getBook()
+void Library::addBook2Lib(Book book_, int i) //DONE TODO I need to come out with a way to insert object book with unique ID as array index
 {
-    for (int i = 0; i < 5; i++)
-    {
-        books[i].getBook();
-    }
+   //Library::book[maxAmountOfBooks] = book_;
 }
 
-/*
+void Library::getBook(int i)
+{
+        std::cout << "Book ID: " << book[i].ID << std::endl;
+        std::cout << "Book Title: " << book[i].title << std::endl;
+        std::cout << "Book Author: " << book[i].author << std::endl;
+        std::cout << "Book year: " << book[i].publicationYear << std::endl;
+}
 Library::~Library()
 {
+    delete []pointerBook;
 }
-*/
-
 

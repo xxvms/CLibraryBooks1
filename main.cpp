@@ -3,20 +3,29 @@
 //
 #include <iostream>
 #include "Library.h"
-//#include <string>
 //#include "Book.h"
 
 int main()
 {
     Library lib;
+    Book book;
+    int choice = {0};
+    int* choicePointer = &choice;
+    for (int i = 0; i < 5; i++)
+    {
+        std::cout << "please provide book ID starting from 0: ";
+        std::cin >> choice;
+        
+        book.addBook(choicePointer); // todo how about creating ID that would be passed as argument to Library and it will act as Index??
+        
+        lib.addBook2Lib(book, choice); //todo how to create "way" to add number of books and pass this to the Library?
+    }
     
-    lib.addBook2Lib();
-    
-    std::cout << "Show books from Library: " << std::endl;
-    
-    lib.getBook();
-    
-    
+    for (int i = 0; i < 5; i ++)
+    {
+        lib.getBook(i);
+    }
+   
     system("pause");
     return 0;
 }

@@ -11,12 +11,13 @@
 class Library
 {
 private:
-    Book books[5];
+    int maxAmountOfBooks; //todo create new memory for maximum amount of books
+    Book book[];
     
 public:
     Library();
-    void addBook2Lib();
-    void getBook();
-    //~Library();
+    void addBook2Lib(Book book_, int i);
+    void getBook(int i);
+    ~Library();
 };
 #endif //CLIBRARYBOOKS_LIBRARAY_H
