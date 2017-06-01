@@ -2,14 +2,13 @@
 // Created by tom on 28/05/2017.
 //
 #include "Book.h"
-#include "Library.h"
 #include <iostream>
 
 Book::Book():author("n/a"), title("n/a"), publicationYear(0), ID(0){}
 
-int Book::addBook(int* choiceP)
+int Book::addBook(int howManyBooks)
 {
-    ID = *choiceP;
+    ID = howManyBooks;
     std::cout << "Book ID:" << ID << std::endl;
     std::cout << "Title: ";
     std::cin >> title;

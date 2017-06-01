@@ -8,22 +8,28 @@
 int main()
 {
     Library lib;
-    Book book;
-    int choice = {0};
-    int* choicePointer = &choice;
-    for (int i = 0; i < 5; i++)
+	int howManyBooks {0};
+	std::cout << "How many books do you want to add? ";
+	std::cin >> howManyBooks;
+    Book* howManyBooksP =  new  Book[howManyBooks];
+	   
+    /*int choice = {0};
+    int* choicePointer = &choice;*/
+	
+    for (int i = 0; i < howManyBooks; i++)
     {
-        std::cout << "please provide book ID starting from 0: ";
-        std::cin >> choice;
         
-        book.addBook(choicePointer); // todo how about creating ID that would be passed as argument to Library and it will act as Index??
+        howManyBooksP[i].addBook(i); // todo how about creating ID that would be passed as argument to Library and it will act as Index??
         
-        lib.addBook2Lib(book, choice); //todo how to create "way" to add number of books and pass this to the Library?
+        lib.addBook2Lib(howManyBooksP[i], i); //todo how to create "way" to add number of books and pass this to the Library?
     }
+	system("cls");
     
-    for (int i = 0; i < 5; i ++)
+    for (int i = 0; i < howManyBooks; i++)
     {
+	    std::cout << "Book for ya sir: " << i << std::endl;
         lib.getBook(i);
+	    std::cout << std::endl;
     }
    
     system("pause");

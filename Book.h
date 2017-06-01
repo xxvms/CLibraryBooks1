@@ -19,7 +19,7 @@ public:
     friend class Library;
     Book();
     ~Book();
-    int addBook(int* choiceP);
+    int addBook(int howManyBooks);
     
     void getBook();
 };

@@ -12,8 +12,9 @@ class Library
 {
 private:
     int maxAmountOfBooks; //todo create new memory for maximum amount of books
-    Book book[];
-    
+    Book* pointerBook;
+
+
 public:
     Library();
     void addBook2Lib(Book book_, int i);
